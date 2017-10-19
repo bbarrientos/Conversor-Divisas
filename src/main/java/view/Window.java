@@ -18,9 +18,6 @@ public class Window extends JFrame implements ActionListener,FocusListener  {
     private Central central;
     private ConversionPanel cp;
     private ShowPanel sp;
-    public JComboBox in = cp.getIn();
-    public JComboBox out = cp.getOut();
-    private JButton conv = cp.getConv();
     
     public Window(){
         this.inicializarComponentes();
@@ -45,10 +42,10 @@ public class Window extends JFrame implements ActionListener,FocusListener  {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        conv.addActionListener(
+        cp.conv.addActionListener(
                 (ActionEvent e) -> {
-                    String firstValue = (String) in.getSelectedItem();
-                    String secondValue = (String) out.getSelectedItem();
+                    String firstValue = (String) cp.in.getSelectedItem();
+                    String secondValue = (String) cp.out.getSelectedItem();
             try {
                 central.Calculos(firstValue, secondValue);
             } catch (IOException ex) {

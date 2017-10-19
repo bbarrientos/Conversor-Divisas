@@ -37,13 +37,4 @@ public class ConversionPanel extends JPanel {
         
     }
     
-    public JComboBox getIn(){
-        return this.in;
-    }
-    public JComboBox getOut(){
-        return this.out;
-    }
-    public JButton getConv(){
-        return this.conv;
-    }
 }
