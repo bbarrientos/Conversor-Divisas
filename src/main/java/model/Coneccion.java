@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package s2c52.implementacion;
+package model;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -17,6 +17,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
+import javax.swing.JComboBox;
 
 public class Coneccion {
     public Coneccion(){

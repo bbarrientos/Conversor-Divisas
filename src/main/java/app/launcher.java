@@ -1,6 +1,6 @@
 package app;
 
-import vista.Window;
+import view.Window;
 
 public class launcher {
     
