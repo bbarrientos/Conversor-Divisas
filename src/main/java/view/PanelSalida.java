@@ -4,7 +4,7 @@ import java.awt.FlowLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class ShowPanel extends JPanel {
+public class PanelSalida extends JPanel {
     
     private JLabel inVal;
     private JLabel inCur;
@@ -12,7 +12,7 @@ public class ShowPanel extends JPanel {
     private JLabel outCur;
     private JLabel arrow;
     
-    public ShowPanel(){
+    public PanelSalida(){
         this.initComponents();
     }
     

@@ -1,10 +1,10 @@
 package app;
 
-import view.Window;
+import view.Ventana;
 
 public class launcher {
     
     public static void main(String[] args) {
-        Window v = new Window();
+        Ventana v = new Ventana();
     }
 }

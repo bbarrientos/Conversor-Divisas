@@ -6,30 +6,26 @@ import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.io.IOException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import model.Central;
 
-public class Window extends JFrame implements ActionListener,FocusListener  {
+public class Ventana extends JFrame implements ActionListener,FocusListener  {
     private Central central;
-    private ConversionPanel cp;
-    private ShowPanel sp;
+    private PanelConversion cp;
+    private PanelSalida sp;
     
-    public Window(){
+    public Ventana(){
         this.inicializarComponentes();
     }
     
     private void inicializarComponentes(){
         
-        this.cp = new ConversionPanel();
+        this.cp = new PanelConversion();
         this.cp.val.addFocusListener(this);
         this.add(this.cp,BorderLayout.CENTER);
         
-        this.sp = new ShowPanel();
+        this.sp = new PanelSalida();
         this.add(this.sp,BorderLayout.SOUTH);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

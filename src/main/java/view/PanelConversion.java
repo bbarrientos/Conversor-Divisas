@@ -6,7 +6,7 @@ import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class ConversionPanel extends JPanel {
+public class PanelConversion extends JPanel {
     
     public JTextField val;
     public JComboBox in;
@@ -14,7 +14,7 @@ public class ConversionPanel extends JPanel {
     public JButton conv;
     private String []monedas = {"USD","EUR","CLP"};
     
-    public ConversionPanel(){
+    public PanelConversion(){
         this.initComponents();
     }
 
