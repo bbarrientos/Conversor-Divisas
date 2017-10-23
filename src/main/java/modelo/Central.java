@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package modelo;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -18,16 +18,13 @@ public class Central {
     
     private String value;
     private int Conversion=0;
-    Coneccion ct = new Coneccion();
+    Conexion ct = new Conexion();
     //Tablero tab = new Tablero();
     
-    public Central(){
-            
-    }
-    public void Calculos(String in, String out) throws IOException {     
-        value = ct.Coneccion(in, out);
+    public void convertir(String in, String out) throws IOException {     
+        value = ct.Conexion(in, out);
         //System.out.println("IN : "+in+" OUT: "+out);
-
+        System.out.println("Valor"+value);
         int monedaBint = Integer.parseInt(value);
         //int cantidadDint = Integer.parseInt(cantidadD);
         

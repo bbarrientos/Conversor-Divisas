@@ -1,6 +1,6 @@
 package app;
 
-import view.Ventana;
+import vista.Ventana;
 
 public class launcher {
     

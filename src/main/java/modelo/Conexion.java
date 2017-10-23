@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package modelo;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -19,12 +19,10 @@ import java.net.URL;
 import java.util.Scanner;
 import javax.swing.JComboBox;
 
-public class Coneccion {
-    public Coneccion(){
-        
-    }
-    public String Coneccion(String MonedaBase, String MonedaCambiante) throws IOException {
-        String d = "http://free.currencyconverterapi.com/api/v3/convert?q="+MonedaBase+"_"+MonedaCambiante+"&compact=y";
+public class Conexion {
+    
+    public String Conexion(String divisaInicial, String divisaFinal) throws IOException {
+        String d = "http://free.currencyconverterapi.com/api/v3/convert?q="+divisaInicial+"_"+divisaFinal+"&compact=y";
 
         URL url = new URL(d);
         HttpURLConnection request = (HttpURLConnection) url.openConnection();
