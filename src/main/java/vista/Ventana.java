@@ -41,13 +41,8 @@ public class Ventana extends JFrame implements ActionListener,FocusListener  {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if(panelConversion.btnConvertir == ae.getSource()){
-                    String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
-                    String segundaDivisa = (String) panelConversion.divisaFinal.getSelectedItem();
-            try {
-                central.convertir(primeraDivisa, segundaDivisa);
-            } catch (IOException ex) {
-                Logger.getLogger(Ventana.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
+            String segundaDivisa = (String) panelConversion.divisaFinal.getSelectedItem();
            
         }
 

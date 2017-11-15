@@ -22,15 +22,13 @@ public class Central {
     Conexion ct = new Conexion();
     //Tablero tab = new Tablero();
     
-    public void convertir(String in, String out) throws IOException {     
+    public double convertir(String in, String out) throws IOException {     
         value = ct.Conexion(in, out);
         //System.out.println("IN : "+in+" OUT: "+out);
         System.out.println("Valor"+value);
-        int monedaBint = Integer.parseInt(value);
-        //int cantidadDint = Integer.parseInt(cantidadD);
+        double monedaBint = Double.parseDouble(value);
         
-        //Conversion = monedaBint * cantidadDint;
-        System.out.println(Conversion);
+        return monedaBint;
         
     }
 }
