@@ -21,7 +21,7 @@ import javax.swing.JComboBox;
 
 public class Conexion {
     
-    public String Conexion(String divisaInicial, String divisaFinal) throws IOException {
+    public void Conexion(String divisaInicial, String divisaFinal) throws IOException {
         String d = "http://free.currencyconverterapi.com/api/v3/convert?q="+divisaInicial+"_"+divisaFinal+"&compact=y";
 
         URL url = new URL(d);
@@ -30,9 +30,8 @@ public class Conexion {
 
         JsonParser jp = new JsonParser();
         JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent()));
+        JsonObject object = root.getAsJsonObject();
         
-        Gson gson = new Gson();
-        String jsonString = gson.toJson(root);
-        return jsonString; 
+        System.out.println(object.get("id"));
     }
 }
