@@ -3,16 +3,15 @@ package vista;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import modelo.Calculos;
 import modelo.Central;
 
-public class Ventana extends JFrame implements ActionListener,FocusListener  {
-    private Central central;
+public class Ventana extends JFrame implements ActionListener  {
+    private Calculos calculadora;
     private PanelConversion panelConversion;
     private PanelSalida panelSalida;
     
@@ -24,7 +23,6 @@ public class Ventana extends JFrame implements ActionListener,FocusListener  {
         
         this.panelConversion = new PanelConversion();
         this.panelConversion.btnConvertir.addActionListener(this);
-        this.panelConversion.cantidad.addFocusListener(this);
         this.add(this.panelConversion,BorderLayout.CENTER);
         
         this.panelSalida = new PanelSalida();
@@ -43,17 +41,8 @@ public class Ventana extends JFrame implements ActionListener,FocusListener  {
         if(panelConversion.btnConvertir == ae.getSource()){
             String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
             String segundaDivisa = (String) panelConversion.divisaFinal.getSelectedItem();
-           
-        }
+            System.out.println(calculadora.calcular(primeraDivisa, segundaDivisa,1));
+        }else{System.out.println("Se presiono otro botón.");}
+    }
 
- 
-    }
-    
-    public void focusGained(FocusEvent e){
-        this.panelConversion.cantidad.setText("");
-    }
-    
-    public void focusLost(FocusEvent e){
-    }
-    
 }

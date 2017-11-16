@@ -5,10 +5,34 @@
  */
 package modelo;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import unilidades.Conexion;
+
 /**
  *
  * @author s2c52
  */
 public class Calculos {
     
+    private Conexion con = new Conexion();
+    
+    void Calculos(){
+        
+    }
+    
+    public double calcular(String divIn, String divOut, double cant){
+        
+        double exchange = 1;
+        
+        try {
+            exchange = con.Conexion(divIn, divOut);
+        } catch (IOException ex) {
+            System.err.println("hi");
+        }
+        
+        return 200.0;
+        
+    }
 }

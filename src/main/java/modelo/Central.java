@@ -17,18 +17,9 @@ import javax.swing.JComboBox;
  */
 public class Central {
     
-    private String value;
-    private int Conversion=0;
     Conexion ct = new Conexion();
-    //Tablero tab = new Tablero();
     
-    public double convertir(String in, String out) throws IOException {     
-        value = ct.Conexion(in, out);
-        //System.out.println("IN : "+in+" OUT: "+out);
-        System.out.println("Valor"+value);
-        double monedaBint = Double.parseDouble(value);
-        
-        return monedaBint;
-        
+    public double convertir(String in, String out) throws IOException {
+        return ct.Conexion(in, out);
     }
 }
