@@ -13,10 +13,10 @@ public class PanelSalida extends JPanel {
     private JLabel flecha;
     
     public PanelSalida(){
-        this.initComponents();
+        this.inicializarComponentes();
     }
     
-    private void initComponents(){
+    private void inicializarComponentes(){
         
         FlowLayout lay = new FlowLayout();
         this.setLayout(lay);

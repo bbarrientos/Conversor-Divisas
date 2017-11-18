@@ -18,10 +18,10 @@ public class PanelConversion extends JPanel {
                                 "SCR","SDG","SEK","SGD","SHP","SLL","SOS","SRD","STD","SYP","SZL","THB","TJS","TMT","TND","TOP","TRY","TTD","TWD","TZS","UAH","UGX","USD","UYU","UZS","VEF","VND","VUV","WST","XAF","XCD","XOF","XPF","YER","ZAR","ZMW"};
     
     public PanelConversion(){
-        this.initComponents();
+        this.inicializarComponentes();
     }
 
-    private void initComponents() {
+    private void inicializarComponentes() {
         
         FlowLayout distribucion = new FlowLayout();
         this.setLayout(distribucion);

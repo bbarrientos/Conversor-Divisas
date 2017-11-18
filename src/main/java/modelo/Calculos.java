@@ -8,7 +8,7 @@ package modelo;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import unilidades.Conexion;
+import servicios.Conexion;
 
 /**
  *
@@ -29,10 +29,10 @@ public class Calculos {
         try {
             exchange = con.Conexion(divIn, divOut);
         } catch (IOException ex) {
-            System.err.println("hi");
+            System.err.println(ex.getMessage());
         }
         
-        return 200.0;
+        return exchange*cant;
         
     }
 }

@@ -41,7 +41,7 @@ public class Ventana extends JFrame implements ActionListener  {
         if(panelConversion.btnConvertir == ae.getSource()){
             String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
             String segundaDivisa = (String) panelConversion.divisaFinal.getSelectedItem();
-            System.out.println(calculadora.calcular(primeraDivisa, segundaDivisa,1));
+            calculadora.calcular("JPY", "CLP",1.0);
         }else{System.out.println("Se presiono otro botón.");}
     }
 
