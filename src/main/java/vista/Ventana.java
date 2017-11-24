@@ -8,10 +8,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import modelo.Calculos;
-import modelo.Central;
 
 public class Ventana extends JFrame implements ActionListener  {
-    private Calculos calculadora;
+    public Calculos calculadora = new Calculos();
     private PanelConversion panelConversion;
     private PanelSalida panelSalida;
     
@@ -38,10 +37,15 @@ public class Ventana extends JFrame implements ActionListener  {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(panelConversion.btnConvertir == ae.getSource()){
+        if(this.panelConversion.btnConvertir == ae.getSource()){
             String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
             String segundaDivisa = (String) panelConversion.divisaFinal.getSelectedItem();
-            calculadora.calcular("JPY", "CLP",1.0);
+            double dinero = Double.valueOf(panelConversion.cantidad.getText());
+        //calculadora.calcular("JPY", "CLP",1.0);
+            
+            //System.out.println("Hoal afshd"+primeraDivisa+" ahsbdhjwakd "+segundaDivisa);
+            calculadora.calcular(primeraDivisa, segundaDivisa,dinero);
+            
         }else{System.out.println("Se presiono otro botón.");}
     }
 

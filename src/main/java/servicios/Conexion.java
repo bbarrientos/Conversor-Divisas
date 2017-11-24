@@ -34,7 +34,8 @@ public class Conexion {
         JsonParser jp = new JsonParser();
         JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent()));
         JsonObject object = root.getAsJsonObject();
-        
+        Gson gson = new Gson();
+        //String jsonString = gson.toJson(root);
         Double exchange = object.getAsJsonObject(divisas).get("val").getAsDouble();
         
         request.disconnect();
