@@ -19,7 +19,7 @@ public class Conexion {
         
         URL url = new URL(d);
         HttpURLConnection request = (HttpURLConnection) url.openConnection();
-        
+        System.out.println("d");
         request.connect();
         
         JsonParser jp = new JsonParser();
