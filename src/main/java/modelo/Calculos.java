@@ -19,7 +19,7 @@ public class Calculos {
     
     private Conexion con = new Conexion();
     
-    public double calcular(String divIn, String divOut, double cant){
+    public String calcular(String divIn, String divOut, double cant){
         
         
         
@@ -32,8 +32,8 @@ public class Calculos {
         }
         double conversion = exchange*cant;
         DecimalFormat dF = new DecimalFormat("#.00"); 
-        System.out.println("Total: " +(dF.format(conversion)));
-        return exchange*cant;
+        
+        return dF.format(conversion);
         
     }
 }

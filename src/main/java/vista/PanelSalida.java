@@ -6,10 +6,10 @@ import javax.swing.JPanel;
 
 public class PanelSalida extends JPanel {
     
-    private JLabel cantidadInicial;
-    private JLabel divisaInicial;
-    private JLabel cantidadFinal;
-    private JLabel divisaFinal;
+    public JLabel cantidadInicial;
+    public JLabel divisaInicial;
+    public JLabel cantidadFinal;
+    public JLabel divisaFinal;
     private JLabel flecha;
     
     public PanelSalida(){
