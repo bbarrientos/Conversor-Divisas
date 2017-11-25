@@ -13,7 +13,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JComboBox;
 
 /**
@@ -21,7 +20,6 @@ import javax.swing.JComboBox;
  * @author s2c52
  */
 public class Lector {
-    private ArrayList []divisas; 
     public JComboBox leerArchivo(){
         String ARCHIVO = "data/paises_y_divisas";
         BufferedReader input = null;

@@ -1,9 +1,17 @@
 package vista;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import modelo.Calculos;
 
 public class Ventana extends JFrame implements ActionListener  {
@@ -27,20 +35,32 @@ public class Ventana extends JFrame implements ActionListener  {
         this.panelSalida = new PanelSalida();
         this.add(this.panelSalida,BorderLayout.SOUTH);
 
+        
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(900,100);
+        this.setSize(800,100);
         this.setTitle("Conversor de Divisas (CC)");
         this.setLocation(100,100);
         this.setResizable(false);
         this.setVisible(true);
+        
+        ImageIcon icon = new ImageIcon("imagenes/icono.jpg");
+        this.setIconImage(icon.getImage());
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
         if(this.panelConversion.btnConvertir == ae.getSource()){
-            String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
+            convertir();
+        }else if(this.panelConversion.btnSwitch == ae.getSource()){
+            intercambiar();
+        }
+        
+    }
+    
+    private void convertir(){
+        String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
             String segundaDivisa = (String) panelConversion.divisaFinal.getSelectedItem();
-            
+
             double dinero = Double.valueOf(panelConversion.cantidad.getText());
             
             String primera = primeraDivisa.substring(primeraDivisa.length()-3,primeraDivisa.length());
@@ -51,11 +71,10 @@ public class Ventana extends JFrame implements ActionListener  {
             this.panelSalida.cantidadFinal.setText(c);
             this.panelSalida.divisaInicial.setText(primeraDivisa);
             this.panelSalida.divisaFinal.setText(segundaDivisa);
-            
-            
-            
-        }else if(this.panelConversion.btnSwitch == ae.getSource()){
-            String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
+    }
+    
+    private void intercambiar(){
+        String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
             String segundaDivisa = (String) panelConversion.divisaFinal.getSelectedItem();
             String aux1= primeraDivisa;
             
@@ -76,11 +95,6 @@ public class Ventana extends JFrame implements ActionListener  {
             this.panelSalida.cantidadFinal.setText(c);
             this.panelSalida.divisaInicial.setText(primeraDivisa);
             this.panelSalida.divisaFinal.setText(segundaDivisa);
-        
-        
-        
-        }
-        
     }
 
 }
