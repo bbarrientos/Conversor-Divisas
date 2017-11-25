@@ -3,9 +3,6 @@ package vista;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
 import modelo.Calculos;
 
@@ -31,10 +28,10 @@ public class Ventana extends JFrame implements ActionListener  {
         this.add(this.panelSalida,BorderLayout.SOUTH);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(850,100);
+        this.setSize(900,100);
         this.setTitle("Conversor de Divisas (CC)");
         this.setLocation(100,100);
-        this.setResizable(true);
+        this.setResizable(false);
         this.setVisible(true);
     }
 

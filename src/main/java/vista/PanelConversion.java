@@ -1,7 +1,6 @@
 package vista;
 
 import java.awt.FlowLayout;
-import javax.swing.ComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
