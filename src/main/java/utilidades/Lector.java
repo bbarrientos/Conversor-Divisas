@@ -23,29 +23,7 @@ import javax.swing.JComboBox;
 public class Lector {
     private ArrayList []divisas; 
     public JComboBox leerArchivo(){
-//        String AR0CHIVO = "data/divisas.txt";
-//        FileReader lector = null;
-//        int caracter;
-//        try {
-//            lector = new FileReader(ARCHIVO);
-//            caracter = lector.read();
-//            
-//            while (caracter != -1) {
-//                System.out.print((char) caracter);
-//                caracter = lector.read();
-//                //System.out.println(caracter);
-//            }
-//            return caracter;
-//        } catch (IOException ex) {
-//            System.out.println("Problemas leyendo el archivo " + ARCHIVO);
-//        } finally {
-//            try {
-//                lector.close();
-//            } catch (IOException ex) {
-//                System.out.println("Problemas cerrando el archivo " + ARCHIVO);
-//            }
-//        }return 0;
-        String ARCHIVO = "data/divisas.txt";
+        String ARCHIVO = "data/paises_y_divisas";
         BufferedReader input = null;
         try {
             input = new BufferedReader(new FileReader(ARCHIVO));

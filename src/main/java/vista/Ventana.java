@@ -25,7 +25,7 @@ public class Ventana extends JFrame implements ActionListener  {
         this.panelConversion.btnConvertir.addActionListener(this);
         
         this.add(this.panelConversion,BorderLayout.CENTER);
-        this.add(this.panelConversion.btnConvertir,BorderLayout.CENTER);
+        //this.add(this.panelConversion.btnConvertir,BorderLayout.CENTER);
         
         this.panelSalida = new PanelSalida();
         this.add(this.panelSalida,BorderLayout.SOUTH);
