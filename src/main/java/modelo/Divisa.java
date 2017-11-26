@@ -10,9 +10,34 @@ package modelo;
  * @author s2c52
  */
 public class Divisa {
+    private String alpha3;
 
+    public String getAlpha3() {
+        return alpha3;
+    }
+
+    public void setAlpha3(String alpha3) {
+        this.alpha3 = alpha3;
+    }
+
+    public String getCurrencySymbol() {
+        return currencySymbol;
+    }
+
+    public void setCurrencySymbol(String currencySymbol) {
+        this.currencySymbol = currencySymbol;
+    }
+
+    public String getCurrencyName() {
+        return currencyName;
+    }
+
+    public void setCurrencyName(String currencyName) {
+        this.currencyName = currencyName;
+    }
     private String currencyId;
-
+    private String currencySymbol;
+    private String currencyName;
     private String name;
 
     public Divisa() {
@@ -20,7 +45,7 @@ public class Divisa {
     
     public Divisa(String currencyId, String name) {
         this.currencyId = currencyId;
-        this.name = name;
+        this.currencyName = name;
     }
     
     public String getCurrencyId() {
@@ -32,11 +57,11 @@ public class Divisa {
     }
 
     public String getName() {
-        return name;
+        return currencyName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.currencyName = name;
     }
 
     @Override

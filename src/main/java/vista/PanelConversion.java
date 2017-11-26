@@ -2,6 +2,7 @@ package vista;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
+import javax.swing.ComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
@@ -30,13 +31,13 @@ public class PanelConversion extends JPanel {
         this.cantidad = new JTextField(5);
         this.add(cantidad);
         
-        this.divisaInicial = new JComboBox(this.divisas.leerjson().toArray());
+        this.divisaInicial = new JComboBox();
         this.add(divisaInicial);
         
         this.btnSwitch = new JButton("<-->");
         this.add(btnSwitch);
-        
-        this.divisaFinal = new JComboBox(this.divisas.leerjson().toArray());
+        this.divisas.leerjson();
+        this.divisaFinal = new JComboBox();
         this.add(divisaFinal);
         
         this.btnConvertir = new JButton("Convertir");

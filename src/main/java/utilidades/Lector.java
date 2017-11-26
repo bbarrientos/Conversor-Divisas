@@ -25,7 +25,7 @@ import modelo.Divisa;
  * @author s2c52
  */
 public class Lector {
-    public ArrayList leerjson(){
+    public void leerjson(){
         
         String rutaArchivoDivisas = "data/divisas.json";
         Gson gs = new Gson();
@@ -35,16 +35,14 @@ public class Lector {
             BufferedReader br = new BufferedReader(new FileReader(rutaArchivoDivisas));
             JsonElement jsonElement = jsonParser.parse(br);
             JsonObject object = jsonElement.getAsJsonObject();
-            ArrayList<Divisa> listobj = new Gson().fromJson(object, new TypeToken<List<Divisa>>() {}.getType());
-            return listobj;
+            ArrayList<Divisa> listobj = new Gson().fromJson(object.getAsJsonArray("results"), new TypeToken<List<Divisa>>() {}.getType());
+            System.out.println(jsonElement.getAsJsonObject().get("results").getAsJsonArray());
+            listobj.forEach((persona) -> {
+                System.out.println(persona);
+            });
         }catch(IOException e){
             e.printStackTrace();
         }
-        
-        
-        return null;
-        
-        //return null
     }
     public JComboBox leerArchivo(){
         String ARCHIVO = "data/paises_y_divisas";

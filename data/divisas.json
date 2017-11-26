@@ -1,4 +1,4 @@
-{"results":{"AF":{"alpha3":"AFG","currencyId":"AFN","currencyName":"Afghan afghani","currencySymbol":"؋","id":"AF","name":"Afghanistan"},
+{"results":[{"AF":{"alpha3":"AFG","currencyId":"AFN","currencyName":"Afghan afghani","currencySymbol":"؋","id":"AF","name":"Afghanistan"},
             "AI":{"alpha3":"AIA","currencyId":"XCD","currencyName":"East Caribbean dollar","currencySymbol":"$","id":"AI","name":"Anguilla"},
             "AU":{"alpha3":"AUS","currencyId":"AUD","currencyName":"Australian dollar","currencySymbol":"$","id":"AU","name":"Australia"},
             "BD":{"currencyId":"BDT","currencyName":"Bangladeshi taka","name":"Bangladesh","alpha3":"BGD","id":"BD"},
@@ -198,4 +198,4 @@
             "UG":{"alpha3":"UGA","currencyId":"UGX","currencyName":"Ugandan shilling","currencySymbol":"USh","id":"UG","name":"Uganda"},
             "UY":{"alpha3":"URY","currencyId":"UYU","currencyName":"Uruguayan peso","currencySymbol":"$U","id":"UY","name":"Uruguay"},
             "WF":{"currencyId":"XPF","currencyName":"CFP franc","name":"Wallis and Futuna Islands","alpha3":"WLF","id":"WF"},
-            "LT":{"alpha3":"LTU","currencyId":"EUR","currencyName":"European euro","currencySymbol":"€","id":"LT","name":"Lithuania"}}}
+            "LT":{"alpha3":"LTU","currencyId":"EUR","currencyName":"European euro","currencySymbol":"€","id":"LT","name":"Lithuania"}}]}
