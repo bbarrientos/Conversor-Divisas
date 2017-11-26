@@ -4,14 +4,18 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
+import java.text.NumberFormat;
+import java.text.ParsePosition;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import modelo.Calculos;
 
 public class Ventana extends JFrame implements ActionListener  {
@@ -49,14 +53,32 @@ public class Ventana extends JFrame implements ActionListener  {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(this.panelConversion.btnConvertir == ae.getSource()){
-            convertir();
-        }else if(this.panelConversion.btnSwitch == ae.getSource()){
-            intercambiar();
+        boolean vali = validacion(this.panelConversion.cantidad.getText());
+        if(vali != false){
+            if(this.panelConversion.btnConvertir == ae.getSource()){
+                
+                convertir();
+            }else if(this.panelConversion.btnSwitch == ae.getSource()){
+                intercambiar();
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo se Aceptan Numeros");
         }
+        
         
     }
     
+    private boolean validacion(String cantidadInicial){
+        int numero;
+        try{
+            numero = Integer.parseInt(cantidadInicial);
+            return true;
+        }catch(Exception e){
+            return false;
+        }
+    }
+    
+   
     private void convertir(){
         String primeraDivisa = (String) panelConversion.divisaInicial.getSelectedItem();
             String segundaDivisa = (String) panelConversion.divisaFinal.getSelectedItem();
