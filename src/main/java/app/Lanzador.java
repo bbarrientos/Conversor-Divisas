@@ -1,10 +1,28 @@
 package app;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import vista.Ventana;
 
 public class Lanzador {
     
     public static void main(String[] args) {
-        Ventana ventanaPrincipal = new Ventana();
+        //Ventana ventanaPrincipal = new Ventana();
+        String rutaArchivoDivisas = "data/divisas.json";
+        Gson gs = new Gson();
+        JsonParser jsonParser = new JsonParser();
+        
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(rutaArchivoDivisas));
+            JsonElement jsonElement = jsonParser.parse(br);
+            JsonObject object = jsonElement.getAsJsonObject();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 }
