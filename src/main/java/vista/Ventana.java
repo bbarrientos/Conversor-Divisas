@@ -28,25 +28,24 @@ public class Ventana extends JFrame implements ActionListener  {
     }
     
     private void inicializarComponentes(){
-        
+        this.setBackground(Color.yellow);
         this.panelConversion = new PanelConversion();
         this.panelConversion.btnSwitch.addActionListener(this);
         this.panelConversion.btnConvertir.addActionListener(this);
         
         this.add(this.panelConversion,BorderLayout.CENTER);
-        //this.add(this.panelConversion.btnConvertir,BorderLayout.CENTER);
         
         this.panelSalida = new PanelSalida();
         this.add(this.panelSalida,BorderLayout.SOUTH);
 
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(800,100);
+        this.setSize(900,100);
+        
         this.setTitle("Conversor de Divisas (CC)");
         this.setLocation(100,100);
         this.setResizable(false);
         this.setVisible(true);
-        
         ImageIcon icon = new ImageIcon("imagenes/icono.jpg");
         this.setIconImage(icon.getImage());
     }
@@ -64,14 +63,12 @@ public class Ventana extends JFrame implements ActionListener  {
         }else{
             JOptionPane.showMessageDialog(null, "Solo se Aceptan Numeros");
         }
-        
-        
     }
     
     private boolean validacion(String cantidadInicial){
-        int numero;
+        double numero;
         try{
-            numero = Integer.parseInt(cantidadInicial);
+            numero = Double.parseDouble(cantidadInicial);
             return true;
         }catch(Exception e){
             return false;

@@ -1,5 +1,6 @@
 package vista;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -40,6 +41,7 @@ public class PanelConversion extends JPanel {
         
         this.btnConvertir = new JButton("Convertir");
         this.add(btnConvertir);
+        this.setBackground(new Color(20, 54, 93));
         
     }
     
