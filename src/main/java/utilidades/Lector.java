@@ -16,15 +16,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JComboBox;
+import modelo.Divisa;
 
 /**
  *
  * @author s2c52
  */
 public class Lector {
-    
-    public void leerjson(){
+    public ArrayList leerjson(){
+        
         String rutaArchivoDivisas = "data/divisas.json";
         Gson gs = new Gson();
         JsonParser jsonParser = new JsonParser();
@@ -33,15 +35,17 @@ public class Lector {
             BufferedReader br = new BufferedReader(new FileReader(rutaArchivoDivisas));
             JsonElement jsonElement = jsonParser.parse(br);
             JsonObject object = jsonElement.getAsJsonObject();
+            ArrayList<Divisa> listobj = new Gson().fromJson(object, new TypeToken<List<Divisa>>() {}.getType());
+            return listobj;
         }catch(IOException e){
             e.printStackTrace();
         }
         
         
-        
+        return null;
         
         //return null
-    }/*
+    }
     public JComboBox leerArchivo(){
         String ARCHIVO = "data/paises_y_divisas";
         BufferedReader input = null;
@@ -63,5 +67,5 @@ public class Lector {
                 System.out.println("Imposible abrir el archivo");
             }
         }return null;
-    }*/
+    }
 }

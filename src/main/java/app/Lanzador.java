@@ -14,20 +14,7 @@ import vista.Ventana;
 public class Lanzador {
     
     public static void main(String[] args) {
-        //Ventana ventanaPrincipal = new Ventana();
-        String rutaArchivoDivisas = "data/divisas.json";
-        Gson gs = new Gson();
-        JsonParser jsonParser = new JsonParser();
-        
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(rutaArchivoDivisas));
-            JsonElement jsonElement = jsonParser.parse(br);
-            JsonObject object = jsonElement.getAsJsonObject();
-            List<> objs = object.fromJson(jsonElement, new TypeToken<List<Menu>>() {
-            }.getType());
-            object.fo
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+        Ventana ventanaPrincipal = new Ventana();
+
     }
 }

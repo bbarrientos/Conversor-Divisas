@@ -30,13 +30,13 @@ public class PanelConversion extends JPanel {
         this.cantidad = new JTextField(5);
         this.add(cantidad);
         
-        this.divisaInicial = divisas.leerArchivo();
+        this.divisaInicial = new JComboBox(this.divisas.leerjson().toArray());
         this.add(divisaInicial);
         
         this.btnSwitch = new JButton("<-->");
         this.add(btnSwitch);
         
-        this.divisaFinal = divisas.leerArchivo();
+        this.divisaFinal = new JComboBox(this.divisas.leerjson().toArray());
         this.add(divisaFinal);
         
         this.btnConvertir = new JButton("Convertir");
