@@ -40,7 +40,7 @@ public class Ventana extends JFrame implements ActionListener  {
 
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(900,100);
+        this.setSize(800,110);
         
         this.setTitle("Conversor de Divisas (CC)");
         this.setLocation(100,100);
