@@ -11,7 +11,19 @@ package modelo;
  */
 public class Divisa {
     private String alpha3;
+    private String currencyId;
+    private String currencySymbol;
+    private String currencyName;
+    private String name;
 
+    public Divisa() {
+    }
+    
+    public Divisa(String currencyId, String name) {
+        this.currencyId = currencyId;
+        this.currencyName = name;
+    }
+    
     public String getAlpha3() {
         return alpha3;
     }
@@ -35,19 +47,6 @@ public class Divisa {
     public void setCurrencyName(String currencyName) {
         this.currencyName = currencyName;
     }
-    private String currencyId;
-    private String currencySymbol;
-    private String currencyName;
-    private String name;
-
-    public Divisa() {
-    }
-    
-    public Divisa(String currencyId, String name) {
-        this.currencyId = currencyId;
-        this.currencyName = name;
-    }
-    
     public String getCurrencyId() {
         return currencyId;
     }
