@@ -17,7 +17,7 @@ public class Calculos {
             System.err.println(ex.getMessage());
         }
         double conversion = exchange*cant;
-        DecimalFormat dF = new DecimalFormat("#.000"); 
+        DecimalFormat dF = new DecimalFormat("#.00"); 
         
         return dF.format(conversion);
         

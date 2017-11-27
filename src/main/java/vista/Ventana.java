@@ -61,7 +61,7 @@ public class Ventana extends JFrame implements ActionListener  {
                 intercambiar();
             }
         }else{
-            JOptionPane.showMessageDialog(null, "Solo se Aceptan Numeros");
+            JOptionPane.showMessageDialog(null, "Solo se aceptan numeros");
         }
     }
     
