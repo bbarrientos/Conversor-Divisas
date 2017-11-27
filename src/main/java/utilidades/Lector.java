@@ -7,19 +7,43 @@ package utilidades;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JComboBox;
+import modelo.Divisa;
 
 /**
  *
  * @author s2c52
  */
 public class Lector {
+    public void leerjson(){
+        
+        String rutaArchivoDivisas = "data/divisas.json";
+        Gson gs = new Gson();
+        JsonParser jsonParser = new JsonParser();
+        
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(rutaArchivoDivisas));
+            JsonElement jsonElement = jsonParser.parse(br);
+            JsonObject object = jsonElement.getAsJsonObject();
+            ArrayList<Divisa> listobj = new Gson().fromJson(object.getAsJsonArray("results"), new TypeToken<List<Divisa>>() {}.getType());
+            System.out.println(jsonElement.getAsJsonObject().get("results").getAsJsonArray());
+            listobj.forEach((persona) -> {
+                System.out.println(persona);
+            });
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
     public JComboBox leerArchivo(){
         String ARCHIVO = "data/paises_y_divisas";
         BufferedReader input = null;
